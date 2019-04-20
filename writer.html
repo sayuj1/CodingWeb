@@ -5,33 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+    <link rel="stylesheet" href="./theme/night.css">
+    
+<style>
+body{
+    background-color: lightgray;
+}
+</style>
 </head>
 <style id="css-code">
 </style>
 <body>
-<textarea name="write" id="writer" cols="50" rows="50"></textarea>
-<textarea name="write" id="writer2" cols="50" rows="50"></textarea>
-<textarea name="write" id="writer3" cols="50" rows="50"></textarea>
-<div id="preview-html">
-</div>
-
-
+    <div contenteditable="true" style="width: 50%; height: 200px;background-color: white;" id="write">
+            
+    </div>
+    <div contenteditable="true" style="width: 50%; height: 200px;margin-top: 5%;background-color: white;" id="writer2">
+            
+    </div>
+    <div contenteditable="true" style="width: 50%; height: 200px;margin-top: 2%;background-color: white;" id="writer3">
+            
+        </div>
 <div id = "js">
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+
+<div id="html-preview">
+
+</div>
+
+
+</script>
 
 <script>
-$('#writer').on('keyup', function(e){
-    var x = $('#writer').val();
+$('#write').on('keyup', function(e){
+    var hh = document.getElementById('html-preview');
+    $(hh).empty();
+    var x = $('#write').text();
     console.log(x);
-document.getElementById('preview-html').innerHTML = x;
+    
+    //$(hh).empty();
+    
+    //console.log(x);
+document.getElementById('html-preview').innerHTML = $('#write').text();
 
 });
 
 $('#writer2').on('keyup', function(e){
-    var y = $('#writer2').val();
+    var y = $('#writer2').text();
     console.log(y);
 document.getElementById('css-code').innerHTML = y;
 });
@@ -39,7 +60,7 @@ document.getElementById('css-code').innerHTML = y;
 $('#writer3').on('keyup', function(e){
     var kk = document.getElementById('js');
     $(kk).empty();
-    var l = $('#writer3').val();
+    var l = $('#writer3').text();
     console.log(l);
 //document.getElementById('js1').innerHTML = l;
 
