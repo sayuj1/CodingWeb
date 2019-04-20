@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
-    <link rel="stylesheet" href="./theme/night.css">
     
 <style>
 body{
@@ -17,9 +15,10 @@ body{
 <style id="css-code">
 </style>
 <body>
-    <div contenteditable="true" style="width: 50%; height: 200px;background-color: white;" id="write">
+        <div contenteditable="true" style="width: 50%; height: 200px;margin-top: 5%;background-color: white;" id="write">
             
-    </div>
+            </div>
+       
     <div contenteditable="true" style="width: 50%; height: 200px;margin-top: 5%;background-color: white;" id="writer2">
             
     </div>
@@ -34,20 +33,22 @@ body{
 
 </div>
 
-
-</script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
 $('#write').on('keyup', function(e){
-    var hh = document.getElementById('html-preview');
-    $(hh).empty();
+    //var hh = document.getElementById('html-preview');
+    //$(hh).empty();
+   // alert('reach');
+ 
+   //console.log($('#write').html());
+  // console.log($('#write').val());
     var x = $('#write').text();
-    console.log(x);
+    //console.log(x);
     
     //$(hh).empty();
     
     //console.log(x);
-document.getElementById('html-preview').innerHTML = $('#write').text();
+document.getElementById('html-preview').innerHTML = x;
 
 });
 
