@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+</head>
+<body>
+    <input type='file' onchange='test()' id="myFile"><br>
+    <div id="status"></div>
+    <div id="result"></div>
+
+    <button onclick="getInfo()">Click</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+<script>
+  
+  function test1(){
+
+  var file = document.getElementById('myFile').files[0];  //selecting first first file if user uploaded multiple files
+  var file1 = document.getElementById('myFile').files;
+  console.log(file1);
+    if (file) {
+        // create reader
+        var reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = function(e) {
+            // browser completed reading file - display it
+           
+            document.getElementById('result').innerHTML = e.target.result;
+                   
+        };
+    }
+   
+}
+
+function test(){
+    if(document.getElementById("myFile").value != "") {
+        var file = document.getElementById('myFile').files[0];
+        var reader = new FileReader();
+        //console.log(file['name']);
+        const name = file['name'];
+        const newName = name.split(".");
+        console.log(newName);
+        console.log(newName.length);
+        document.getElementById("status").innerHTML = "File uploaded";
+        for(var i = 0 ; i<newName.length; i++){
+            //console.log(newName[i]);
+            if(i+1 == newName.length){
+                if(newName[i] == "html"){
+                    console.log("valid html file");
+                    test1();
+                }
+                else{
+                    console.log("invalid html file");
+                    document.getElementById("status").innerHTML = "OOps!! Please upload html file";
+                }
+            }
+        }
+   
+}
+}
+
+function getInfo(){
+    const x = document.querySelector('#result');
+    const g = $(x).html();
+    const z = $(x).contents();
+   // const y = $(x).text();
+//   console.log(g);
+   // console.log(y);
+   // console.log(z);
+   // console.log(z.length);
+    var data = []; //array
+    for(var i = 0 ; i<z.length; i++){
+       //console.log($(z[i]).contents());
+       var j = $(z[i]).contents();
+       //console.log(j['context']);
+       console.log(j['context']['nodeName']);
+       var k = j['context']['nodeName'];
+       console.log($(k).length);
+       var c = $(k).length;
+        data.push({nodeName: k, count: c});
+       
+    }
+    console.log(data);
+    newData = [];
+    newCount = [];
+    for(var i = 0 ; i< data.length; i++){
+        newData.push(data[i]['nodeName']);
+        newCount.push(data[i]['count']);
+    }
+    data2 = [];
+    data2 = newData;
+    newData = [...new Set(newData)];
+    //console.log(newData);
+    //console.log(data2);
+    count1 = [];
+    for(var i = 0; i< newData.length; i++){
+        count1.push(data2.indexOf(newData[i]));
+    }
+    //console.log(count1);
+   newCount1 = [];
+   for(var i = 0; i< count1.length; i++)
+   {
+       newCount1.push(newCount[count1[i]]);
+   }
+   //console.log(newCount1);
+    data = [];
+    //console.log(newData);
+    for(var i = 0; i<newData.length; i++){
+        data.push({nodeName: newData[i], count: newCount1[i]});
+    }
+    console.log(data);
+    //console.log(g);
+}
+
+    
+
+</script>
+</body>
+</html>

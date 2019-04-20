@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<style id="css-code">
+</style>
+<body>
+<textarea name="write" id="writer" cols="50" rows="50"></textarea>
+<textarea name="write" id="writer2" cols="50" rows="50"></textarea>
+<textarea name="write" id="writer3" cols="50" rows="50"></textarea>
+<div id="preview-html">
+</div>
+
+
+<div id = "js">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+
+<script>
+$('#writer').on('keyup', function(e){
+    var x = $('#writer').val();
+    console.log(x);
+document.getElementById('preview-html').innerHTML = x;
+
+});
+
+$('#writer2').on('keyup', function(e){
+    var y = $('#writer2').val();
+    console.log(y);
+document.getElementById('css-code').innerHTML = y;
+});
+
+$('#writer3').on('keyup', function(e){
+    var kk = document.getElementById('js');
+    $(kk).empty();
+    var l = $('#writer3').val();
+    console.log(l);
+//document.getElementById('js1').innerHTML = l;
+
+var newScript = document.createElement("script");
+var inlineScript = document.createTextNode(l);
+newScript.appendChild(inlineScript); 
+kk.appendChild(newScript);
+
+});
+
+
+</script>
+
+</body>
+</html>
