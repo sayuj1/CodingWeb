@@ -61,16 +61,6 @@ $('#write').on('keyup', function(e){
 
 });
 
-function correct(){
-    var h = ace.edit("write"); 
-    $('#output-preview').contents().find('body').empty();
-   // var x = $('#write').text();
-    x = h.getValue();
-    
-    //$('#output-preview').contents().find('body').append(x);
-
-   //document.getElementById('output-preview').srcdoc = x;
-}
 
 var c = ace.edit("writer2");   
     c.getSession().setMode("ace/mode/css");
@@ -87,9 +77,7 @@ $('#writer2').on('keyup', function(e){
     y = c.getValue();
    // console.log(y);
    $('#output-preview').contents().find('head').append(`<style>`+y+`</style>`);
-    //var y = $('#writer2').text();
     
-//document.getElementById('css-code').innerHTML = y;
 });
 
 var e = ace.edit("writer3");
@@ -105,25 +93,16 @@ $('#writer3').on('keyup', function(e){
     
     var e = ace.edit("writer3"); 
     console.log(e.getValue());
-    //var kk = document.getElementById('js');
-   // $(kk).empty();
-    //var l = $('#writer3').text();
+   
     l=e.getValue();
     
-    //console.log(l);
+    
     var h = ace.edit("write"); 
     $('#output-preview').contents().find('body').empty();
-   // var x = $('#write').text();
+  
     x = h.getValue();
    document.getElementById('output-preview').srcdoc =`<script>`+l+`<\/script>`+x;
-   //correct();
-//document.getElementById('js1').innerHTML = l;
 
-/*var newScript = document.createElement("script");
-var inlineScript = document.createTextNode(l);
-newScript.appendChild(inlineScript); 
-kk.appendChild(newScript);
-*/
 });
 
 </script>
