@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
 <style>
 body{
     background-color: lightgray;
 }   
 </style>
 </head>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
 
 <style id="css-code">
 </style>
@@ -30,40 +29,57 @@ body{
 <div id = "js">
 </div>
 
-
 <div id="html-preview">
 
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-       
-        //console.log(e.getValue());
-</script>
+
         
 <script>
+    var h = ace.edit("write");   
+    h.getSession().setMode("ace/mode/html");
+    h.setTheme("ace/theme/xcode");
+    h.setValue(``,1);
+    h.setOptions({
+        fontSize: "15pt",
+    });
+
 $('#write').on('keyup', function(e){
-   
-    var x = $('#write').text();
-    
+    var h = ace.edit("write"); 
+   // var x = $('#write').text();
+    x = h.getValue();
 document.getElementById('html-preview').innerHTML = x;
 
 
 });
 
+var c = ace.edit("writer2");   
+    c.getSession().setMode("ace/mode/css");
+   // c.setTheme("ace/theme/xcode");
+    
+    c.setOptions({
+        fontSize: "15pt",
+    });
+    c.setValue(``,1);
+
+
 $('#writer2').on('keyup', function(e){
-    var y = $('#writer2').text();
-    console.log(y);
+    var c = ace.edit("writer2");   
+    //var y = $('#writer2').text();
+    y = c.getValue();
+   // console.log(y);
 document.getElementById('css-code').innerHTML = y;
 });
-var count = 0;
+
 var e = ace.edit("writer3");
     
         e.getSession().setMode("ace/mode/javascript");
-        e.setTheme("ace/theme/github");
-        e.getSession().setTabSize(0);
-        count++;
- 
+       // e.setTheme("ace/theme/github");
+        e.setValue(``,1);
+        e.setOptions({
+        fontSize: "15pt",
+    })
+
 $('#writer3').on('keyup', function(e){
     var e = ace.edit("writer3"); 
     console.log(e.getValue());
