@@ -12,9 +12,6 @@ body{
 }   
 </style>
 </head>
-
-<style id="css-code">
-</style>
 <body>
     
         <div contenteditable="true" style="width: 50%; height: 200px;margin-top: 5%;background-color: white;" id="write">
@@ -28,10 +25,15 @@ body{
         </div>
 <div id = "js">
 </div>
+<!--<div id="html-preview">
 
-<div id="html-preview">
+    </div> 
 
-</div>
+    -->
+<iframe id="output-preview">
+
+</iframe>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
         
@@ -46,33 +48,52 @@ body{
 
 $('#write').on('keyup', function(e){
     var h = ace.edit("write"); 
+    $('#output-preview').contents().find('body').empty();
    // var x = $('#write').text();
     x = h.getValue();
-document.getElementById('html-preview').innerHTML = x;
+    
+    //$('#output-preview').contents().find('body').append(x);
+    var e = ace.edit("writer3"); 
+    l=e.getValue();
+    document.getElementById('output-preview').srcdoc = x+`<script>`+l+`<\/script>`;
+//document.getElementById('html-preview').innerHTML = x;
 
 
 });
 
+function correct(){
+    var h = ace.edit("write"); 
+    $('#output-preview').contents().find('body').empty();
+   // var x = $('#write').text();
+    x = h.getValue();
+    
+    //$('#output-preview').contents().find('body').append(x);
+
+   //document.getElementById('output-preview').srcdoc = x;
+}
+
 var c = ace.edit("writer2");   
     c.getSession().setMode("ace/mode/css");
    // c.setTheme("ace/theme/xcode");
-    
     c.setOptions({
         fontSize: "15pt",
     });
     c.setValue(``,1);
 
-
 $('#writer2').on('keyup', function(e){
+    
     var c = ace.edit("writer2");   
-    //var y = $('#writer2').text();
+    $('#output-preview').contents().find('head').empty();
     y = c.getValue();
    // console.log(y);
-document.getElementById('css-code').innerHTML = y;
+   $('#output-preview').contents().find('head').append(`<style>`+y+`</style>`);
+    //var y = $('#writer2').text();
+    
+//document.getElementById('css-code').innerHTML = y;
 });
 
 var e = ace.edit("writer3");
-    
+       
         e.getSession().setMode("ace/mode/javascript");
        // e.setTheme("ace/theme/github");
         e.setValue(``,1);
@@ -81,20 +102,28 @@ var e = ace.edit("writer3");
     })
 
 $('#writer3').on('keyup', function(e){
+    
     var e = ace.edit("writer3"); 
     console.log(e.getValue());
-    var kk = document.getElementById('js');
-    $(kk).empty();
+    //var kk = document.getElementById('js');
+   // $(kk).empty();
     //var l = $('#writer3').text();
     l=e.getValue();
-    console.log(l);
+    
+    //console.log(l);
+    var h = ace.edit("write"); 
+    $('#output-preview').contents().find('body').empty();
+   // var x = $('#write').text();
+    x = h.getValue();
+   document.getElementById('output-preview').srcdoc =`<script>`+l+`<\/script>`+x;
+   //correct();
 //document.getElementById('js1').innerHTML = l;
 
-var newScript = document.createElement("script");
+/*var newScript = document.createElement("script");
 var inlineScript = document.createTextNode(l);
 newScript.appendChild(inlineScript); 
 kk.appendChild(newScript);
-
+*/
 });
 
 </script>
