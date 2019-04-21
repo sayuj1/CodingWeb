@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    
 <style>
 body{
     background-color: lightgray;
-}
+}   
 </style>
 </head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+
 <style id="css-code">
 </style>
 <body>
+    
         <div contenteditable="true" style="width: 50%; height: 200px;margin-top: 5%;background-color: white;" id="write">
             
             </div>
@@ -23,7 +26,6 @@ body{
             
     </div>
     <div contenteditable="true" style="width: 50%; height: 200px;margin-top: 2%;background-color: white;" id="writer3">
-            
         </div>
 <div id = "js">
 </div>
@@ -35,20 +37,17 @@ body{
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
+       
+        //console.log(e.getValue());
+</script>
+        
+<script>
 $('#write').on('keyup', function(e){
-    //var hh = document.getElementById('html-preview');
-    //$(hh).empty();
-   // alert('reach');
- 
-   //console.log($('#write').html());
-  // console.log($('#write').val());
+   
     var x = $('#write').text();
-    //console.log(x);
     
-    //$(hh).empty();
-    
-    //console.log(x);
 document.getElementById('html-preview').innerHTML = x;
+
 
 });
 
@@ -57,11 +56,21 @@ $('#writer2').on('keyup', function(e){
     console.log(y);
 document.getElementById('css-code').innerHTML = y;
 });
-
+var count = 0;
+var e = ace.edit("writer3");
+    
+        e.getSession().setMode("ace/mode/javascript");
+        e.setTheme("ace/theme/github");
+        e.getSession().setTabSize(0);
+        count++;
+ 
 $('#writer3').on('keyup', function(e){
+    var e = ace.edit("writer3"); 
+    console.log(e.getValue());
     var kk = document.getElementById('js');
     $(kk).empty();
-    var l = $('#writer3').text();
+    //var l = $('#writer3').text();
+    l=e.getValue();
     console.log(l);
 //document.getElementById('js1').innerHTML = l;
 
@@ -71,7 +80,6 @@ newScript.appendChild(inlineScript);
 kk.appendChild(newScript);
 
 });
-
 
 </script>
 
