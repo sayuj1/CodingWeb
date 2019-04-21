@@ -12,41 +12,65 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
 body{
-    background-color: lightgray;
+    background-color: #333641;
+    opacity: 0.9;
 }   
 .a{
  float: left;
- margin-left: 2%;
+ margin-left: 1%;
+
 }
+
 .b{
  float: left;
- margin-left: 2%;
+ margin-left: 1%;
 }
 .c{
 float: left;
-margin-left: 2%;
+margin-left: 1%;
 }
+
 #output-preview{
-margin-top: 2%;
+margin-top: 1%;
 width: 100%;
 height: 100vh;
 background-color: white;
 }
+.head-div{
+    width: 32%;
+    height: 3%;
+   color: white;
+    background-color: rgb(37, 70, 99);
+    padding-left: 1%;
+    font-size: 24px;
+}
 </style>
 </head>
 <body>
-    
-        <div contenteditable="true" class="a ace_autocomplete" style="width: 30%; height: 200px;margin-top: 2%;background-color: white;" id="write">
-            
-            </div>
-       
-    <div contenteditable="true" class="b" style="width: 30%; height: 200px;margin-top: 2%;background-color: white;" id="writer2">
-            
+    <div>
+        hi
     </div>
-    <div contenteditable="true" class="c" style="width: 30%; height: 200px;margin-top: 2%;background-color: white;" id="writer3">
+    
+        <div class="head-div a">HTML</div>
+        <div class="head-div b">CSS</div> 
+        <div class="head-div c">JavaScript</div>
+        <div contenteditable="true" class="a" style="width: 32%; height: 450px;margin-top: 0;" id="write">
         </div>
-<div id = "js">
+    
+    <div>
+        
+    <div contenteditable="true" class="b" style="width: 32%; height: 450px;margin-top: 0%;" id="writer2">     
+    </div>
 </div>
+<div>
+    
+    <div contenteditable="true" class="c" style="width: 32%; height: 450px;margin-top: 0%;" id="writer3">
+        </div>
+    </div>
+<!--<div id = "js">
+</div>
+-->
+
 <!--<div id="html-preview"></div> -->
 <iframe id="output-preview" frameborder="0">
 
@@ -56,10 +80,10 @@ background-color: white;
 <script>
     var h = ace.edit("write");   
     h.getSession().setMode("ace/mode/html");
-    h.setTheme("ace/theme/xcode");
+    h.setTheme("ace/theme/cobalt");
     h.setValue(``,1);
     h.setOptions({
-        fontSize: "15pt",
+        fontSize: "12pt",
     });
 
 $('#write').on('keyup', function(e){
@@ -71,7 +95,9 @@ $('#write').on('keyup', function(e){
     //$('#output-preview').contents().find('body').append(x);
     var e = ace.edit("writer3"); 
     l=e.getValue();
-    document.getElementById('output-preview').srcdoc = x+`<script>`+l+`<\/script>`;
+    var c = ace.edit("writer2");  
+    y = c.getValue(); 
+    document.getElementById('output-preview').srcdoc = x+`<style>`+y+`</style>`+`<script>`+l+`<\/script>`;
 //document.getElementById('html-preview').innerHTML = x;
 
 
@@ -80,9 +106,9 @@ $('#write').on('keyup', function(e){
 
 var c = ace.edit("writer2");   
     c.getSession().setMode("ace/mode/css");
-   // c.setTheme("ace/theme/xcode");
+    c.setTheme("ace/theme/cobalt");
     c.setOptions({
-        fontSize: "15pt",
+        fontSize: "12pt",
     });
     c.setValue(``,1);
 
@@ -99,26 +125,26 @@ $('#writer2').on('keyup', function(e){
 var e = ace.edit("writer3");
        
         e.getSession().setMode("ace/mode/javascript");
-       // e.setTheme("ace/theme/github");
+        e.setTheme("ace/theme/cobalt");
         e.setValue(``,1);
+      //  e.focus();
         e.setOptions({
-        fontSize: "15pt",
-        
+        fontSize: "12pt",
     });
 
 $('#writer3').on('keyup', function(e){
     
     var e = ace.edit("writer3"); 
     console.log(e.getValue());
-   
     l=e.getValue();
-    
-    
+
     var h = ace.edit("write"); 
     $('#output-preview').contents().find('body').empty();
-  
     x = h.getValue();
-   document.getElementById('output-preview').srcdoc =`<script>`+l+`<\/script>`+x;
+
+    var c = ace.edit("writer2");  
+    y = c.getValue(); 
+   document.getElementById('output-preview').srcdoc = `<style>`+y+`</style>`+`<script>`+l+`<\/script>`+x;
 
 });
 
