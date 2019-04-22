@@ -1,188 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<style>
-body{
-    background-color: #333641;
-    opacity: 0.9;
-}   
-.a{
- float: left;
- margin-left: 1%;
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #333641;
+            opacity: 0.9;
+        }
 
-}
+        .a {
+            float: left;
+            margin-left: 1%;
 
-.b{
- float: left;
- margin-left: 1%;
-}
-.c{
-float: left;
-margin-left: 1%;
-}
+        }
 
-#output-preview{
-margin-top: 1%;
-width: 100%;
-height: 100vh;
-background-color: white;
-}
-.head-div{
-    width: 32%;
-    height: 3%;
-   color: white;
-    background-color: rgb(37, 70, 99);
-    padding-left: 1%;
-    font-size: 24px;
-}
-.navbar-dark{
-    
-    background-color: black;
-    filter: contrast(.8);
-    -webkit-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
-}
-</style>
+        .b {
+            float: left;
+            margin-left: 1%;
+        }
+
+        .c {
+            float: left;
+            margin-left: 1%;
+        }
+
+        #output-preview {
+            margin-top: 1%;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+        }
+
+        .head-div {
+            width: 32%;
+            height: 3%;
+            color: white;
+            background-color: rgb(37, 70, 99);
+            padding-left: 1%;
+            font-size: 24px;
+        }
+
+        .navbar-dark {
+
+            background-color: black;
+            filter: contrast(.8);
+            -webkit-box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.75);
+        }
+    </style>
 </head>
+
 <body>
-   
+
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">CodingWeb</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link btn btn-lg btn-dark" href="./index.html" style="color: yellow;">Go Back </a>
-          </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link btn btn-lg btn-dark" href="./index.html" style="color: yellow;">Go Back </a>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-        <div class="head-div a">HTML</div>
-        <div class="head-div b">CSS</div> 
-        <div class="head-div c">JavaScript</div>
-        <div contenteditable="true" class="a" style="width: 32%; height: 450px;margin-top: 0;" id="write">
-        </div>
-    
+    <div class="head-div a">HTML</div>
+    <div class="head-div b">CSS</div>
+    <div class="head-div c">JavaScript</div>
+    <div contenteditable="true" class="a" style="width: 32%; height: 450px;margin-top: 0;" id="write">
+    </div>
+
     <div>
-        
-    <div contenteditable="true" class="b" style="width: 32%; height: 450px;margin-top: 0%;" id="writer2">     
-    </div>
-</div>
-<div>
-    
-    <div contenteditable="true" class="c" style="width: 32%; height: 450px;margin-top: 0%;" id="writer3">
+
+        <div contenteditable="true" class="b" style="width: 32%; height: 450px;margin-top: 0%;" id="writer2">
         </div>
     </div>
-<!--<div id = "js">
+    <div>
+
+        <div contenteditable="true" class="c" style="width: 32%; height: 450px;margin-top: 0%;" id="writer3">
+        </div>
+    </div>
+    <!--<div id = "js">
 </div>
 -->
 
-<!--<div id="html-preview"></div> -->
-<iframe id="output-preview" frameborder="0">
-</iframe>
+    <!--<div id="html-preview"></div> -->
+    <iframe id="output-preview" frameborder="0">
+    </iframe>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
-<script src="./js/ext-language_tools.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
+    <script src="./js/ext-language_tools.js"></script>
 
-<script>
-    ace.require("ace/ext/language_tools");
-    var h = ace.edit("write");   
-    h.getSession().setMode("ace/mode/html");
-    h.setTheme("ace/theme/cobalt");
-    h.setValue(``,1);
-    h.setOptions({
-        fontSize: "12pt",
-        enableBasicAutocompletion: true,
-        enableSnippets: true,
-        enableLiveAutocompletion: true
-    });
+    <script>
+        ace.require("ace/ext/language_tools");
+        var h = ace.edit("write");
+        h.getSession().setMode("ace/mode/html");
+        h.setTheme("ace/theme/cobalt");
+        h.setValue(``, 1);
+        h.setOptions({
+            fontSize: "12pt",
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true
+        });
 
-$('#write').on('keyup', function(e){
-    var h = ace.edit("write"); 
-    $('#output-preview').contents().find('body').empty();
-   // var x = $('#write').text();
-    x = h.getValue();
-    
-    //$('#output-preview').contents().find('body').append(x);
-    var e = ace.edit("writer3"); 
-    l=e.getValue();
-    var c = ace.edit("writer2");  
-    y = c.getValue(); 
-    document.getElementById('output-preview').srcdoc = x+`<style>`+y+`</style>`+`<script>`+l+`<\/script>`;
-//document.getElementById('html-preview').innerHTML = x;
+        $('#write').on('keyup', function(e) {
+            var h = ace.edit("write");
+            $('#output-preview').contents().find('body').empty();
+            // var x = $('#write').text();
+            x = h.getValue();
 
-
-});
+            //$('#output-preview').contents().find('body').append(x);
+            var e = ace.edit("writer3");
+            l = e.getValue();
+            var c = ace.edit("writer2");
+            y = c.getValue();
+            document.getElementById('output-preview').srcdoc = x + `<style>` + y + `</style>` + `<script>` + l + `<\/script>`;
+            //document.getElementById('html-preview').innerHTML = x;
 
 
-var c = ace.edit("writer2");   
-    c.getSession().setMode("ace/mode/css");
-    c.setTheme("ace/theme/cobalt");
-    c.setOptions({
-        fontSize: "12pt",
-        enableBasicAutocompletion: true,
-        enableSnippets: true,
-        enableLiveAutocompletion: true
-    });
-    c.setValue(``,1);
+        });
 
-$('#writer2').on('keyup', function(e){
-    
-    var c = ace.edit("writer2");   
-    $('#output-preview').contents().find('head').empty();
-    y = c.getValue();
-   // console.log(y);
-   $('#output-preview').contents().find('head').append(`<style>`+y+`</style>`);
-    
-});
 
-var e = ace.edit("writer3");
-       
+        var c = ace.edit("writer2");
+        c.getSession().setMode("ace/mode/css");
+        c.setTheme("ace/theme/cobalt");
+        c.setOptions({
+            fontSize: "12pt",
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true
+        });
+        c.setValue(``, 1);
+
+        $('#writer2').on('keyup', function(e) {
+
+            var c = ace.edit("writer2");
+            $('#output-preview').contents().find('head').empty();
+            y = c.getValue();
+            // console.log(y);
+            $('#output-preview').contents().find('head').append(`<style>` + y + `</style>`);
+
+        });
+
+        var e = ace.edit("writer3");
+
         e.getSession().setMode("ace/mode/javascript");
         e.setTheme("ace/theme/cobalt");
-        e.setValue(``,1);
-      //  e.focus();
+        e.setValue(``, 1);
+        //  e.focus();
         e.setOptions({
-        fontSize: "12pt",
-        enableBasicAutocompletion: true,
-        enableSnippets: true,
-        enableLiveAutocompletion: true
-    });
+            fontSize: "12pt",
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true
+        });
 
-$('#writer3').on('keyup', function(e){
-    
-    var e = ace.edit("writer3"); 
-   // console.log(e.getValue());
-    l=e.getValue();
+        $('#writer3').on('keyup', function(e) {
 
-    var h = ace.edit("write"); 
-    $('#output-preview').contents().find('body').empty();
-    x = h.getValue();
+            var e = ace.edit("writer3");
+            // console.log(e.getValue());
+            l = e.getValue();
 
-    var c = ace.edit("writer2");  
-    y = c.getValue(); 
-   document.getElementById('output-preview').srcdoc = `<style>`+y+`</style>`+`<script>`+l+`<\/script>`+x;
+            var h = ace.edit("write");
+            $('#output-preview').contents().find('body').empty();
+            x = h.getValue();
 
-});
+            var c = ace.edit("writer2");
+            y = c.getValue();
+            document.getElementById('output-preview').srcdoc = `<style>` + y + `</style>` + `<script>` + l + `<\/script>` + x;
 
-</script>
- <footer>
+        });
+    </script>
+    <footer>
         <div class="box">
-                <div class="container" style="text-align:center;display: inline-box; padding-top: 10px;color: white">    
-                    <span>&copy; Copyright 2019 | Sayuj Sehgal</span>
-                </div>
+            <div class="container" style="text-align:center;display: inline-box; padding-top: 10px;color: white">
+                <span>&copy; Copyright 2019 | Sayuj Sehgal</span>
             </div>
-            </footer>
+        </div>
+    </footer>
 </body>
+
 </html>
