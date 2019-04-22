@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <script src="./js/typed.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+            body{
+                background-color: #333641;
+                opacity: 0.9;
+            }
+            .navbar-dark{
+                height: 60px;
+                color: white;
+    background-color: black;
+    filter: contrast(.8);
+    -webkit-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
+}
+.navbar-content{
+    margin-left: 20px;
+    padding-top: 15px;
+    font-size: 15pt;
+}
+
+.about-codeweb{
+    margin-top: 4%;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    
+}
+.t-head{
+    background-color: black;
+    filter: contrast(.8);
+    text-align: center; 
+    font-size: 25px;
+}
+.head-icons{
+    float: left;
+    margin-left: 20px;
+}
+.circle-red{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #EC6A5F;
+    border: 1px solid #D04E42;
+    display: inline-block;
+}
+.circle-yellow{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #F5C04F;
+    border: 1px solid #D6A13D;
+    display: inline-block;
+}
+.circle-green{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #64CC57;
+    border: 1px solid #4EA73B; 
+    display: inline-block;
+}
+.t-body-container{
+    background-color: black;
+    opacity: 0.5;
+}
+.t-body{
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 130px;
+    color: #00e5ff;
+}
+.root-text{
+    color: #1de9b6;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar-dark">
+        <div class="navbar-content">CodingWeb</div>
+    </div>
+    <div class="row">
+            <div class="about-codeweb col s12 m5 lg5 xl5">
+                <div class="terminal">
+                    <div class="t-head">
+                            <span class="head-icons">
+                                <span class="circle-red"></span>
+                                <span class="circle-yellow"></span>
+                                <span class="circle-green"></span>
+                        </span>
+                        About CodeWeb
+                    </div>
+                   <div class="t-body-container">
+                    <div class="t-body">
+                           <span class="root-text"> root@root~$</span>
+                        <span class="about-text">
+
+                        </span>
+                    </div>
+                </div>
+                 </div>
+                </div>
+    </div>
+    
+       <!-- <div class="container">
+        <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/office.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                  <p><a href="#">This is a link</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+              </div>
+            </div>   -->
+   
+
+    <script>
+    var typed = new Typed('.about-text', {
+  strings: ["CodeWeb is a social development environment for front-end designers and developers.", 
+  "It’s the best place to build and deploy a website, show off your work, build test cases, and find inspiration."],
+  typeSpeed: 60,
+    backSpeed: 20,
+    backDelay: 1000,
+  loop: true,
+  
+});
+    </script>
+</body>
+</html>
