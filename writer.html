@@ -10,6 +10,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="./ext-language_tools.js"></script>
 <style>
 body{
     background-color: #333641;
@@ -91,17 +92,20 @@ box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
 
 <!--<div id="html-preview"></div> -->
 <iframe id="output-preview" frameborder="0">
-
 </iframe>
 
 
 <script>
+    ace.require("ace/ext/language_tools");
     var h = ace.edit("write");   
     h.getSession().setMode("ace/mode/html");
     h.setTheme("ace/theme/cobalt");
     h.setValue(``,1);
     h.setOptions({
         fontSize: "12pt",
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true
     });
 
 $('#write').on('keyup', function(e){
@@ -127,6 +131,9 @@ var c = ace.edit("writer2");
     c.setTheme("ace/theme/cobalt");
     c.setOptions({
         fontSize: "12pt",
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true
     });
     c.setValue(``,1);
 
@@ -148,6 +155,9 @@ var e = ace.edit("writer3");
       //  e.focus();
         e.setOptions({
         fontSize: "12pt",
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true
     });
 
 $('#writer3').on('keyup', function(e){
