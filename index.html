@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
      <!--Import Google Icon Font-->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,25 +21,37 @@
             margin: 0;
             padding: 0;
         }
-            body{
+        body{
                 background-color: #333641;
                 opacity: 0.9;
             }
             .navbar-dark{
+                margin-top: 0px;
                 height: 60px;
                 color: white;
-    background-color: black;
-    filter: contrast(.8);
-    -webkit-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
+            background-color: black;
+            filter: contrast(.8);
+            -webkit-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
 }
 .navbar-content{
     margin-left: 20px;
     padding-top: 15px;
     font-size: 15pt;
 }
-
+.start-coding{
+    float: right;
+    margin-right: 20px;
+    border: 2px solid yellow;
+    color: yellow;
+}
+.start-coding:hover{
+    float: right;
+    margin-right: 20px;
+    border: 2px solid lime;
+    color: #00e676;
+}
 .about-codeweb{
     margin-top: 4%;
     font-size: 20px;
@@ -50,7 +63,7 @@ box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
     background-color: black;
     filter: contrast(.8);
     text-align: center; 
-    font-size: 25px;
+    font-size: 22px;
 }
 .head-icons{
     float: left;
@@ -91,68 +104,230 @@ box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75);
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    min-height: 130px;
+    min-height: 250px;
     color: #00e5ff;
 }
 .root-text{
     color: #1de9b6;
 }
+.c-head{
+    background-color: rgb(37, 70, 99);
+    padding-left: 10px;
+    font-size: 25px;
+}
+.c-body{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 200px;
+    color: #00e5ff;
+}
+
+.c-body-container{
+    background-color: #002240;
+    opacity: 0.5;
+    overflow-y: auto;
+}
+.code-writer-container{
+    margin-top: 40px;
+}
+
     </style>
 </head>
 <body>
     <div class="navbar-dark">
-        <div class="navbar-content">CodingWeb</div>
+        <div class="navbar-content">CodingWeb
+                <a href="./writer.html" class="start-coding waves-effect waves-light btn grey darken-4
+                "><i class="material-icons right">code</i>Start Coding</a>
+        </div>
     </div>
-    <div class="row">
-            <div class="about-codeweb col s12 m5 lg5 xl5">
-                <div class="terminal">
-                    <div class="t-head">
-                            <span class="head-icons">
-                                <span class="circle-red"></span>
-                                <span class="circle-yellow"></span>
-                                <span class="circle-green"></span>
-                        </span>
-                        About CodeWeb
-                    </div>
-                   <div class="t-body-container">
-                    <div class="t-body">
-                           <span class="root-text"> root@root~$</span>
-                        <span class="about-text">
+    <div class="container center" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col push-xl2 push-lg2 push-m2 s12 m7 lg7 xl7">
+                    <div class="card z-depth-3">
+                            <div class="card-content  grey lighten-3" style="height: 150px;">
+                              <span class="card-title activator grey-text text-darken-4" style="font-weight: 800;font-size: 28px;margin-top: 30px;">What is CodingWeb?<a class="btn-floating pink pulse right btn-small"><i class="material-icons">info</i></a></span>
+                            </div>
+                            <div class="card-reveal blue-grey darken-2">
+                              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                              <span style="font-weight: 500; color: white;margin-top: 10px;display: inline-block;"><h5>A modern live preview code editor with modern features ;)</h5></span>
+                            </div>
+                         </div>
+            </div>
 
-                        </span>
-                    </div>
-                </div>
-                 </div>
-                </div>
+        </div>
+            
     </div>
-    
-       <!-- <div class="container">
-        <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="images/office.jpg">
+    <!--About & code editor-->
+    <div class="row">
+        <!--About CodeWeb-->
+        
+            <div class="about-codeweb col s12 m5 lg5 xl5">
+                <div class="row">
+                    <div class="col s12 m12 lg12 xl12">
+                            <div class="terminal z-depth-3">
+                                    <div class="t-head">
+                                            <span class="head-icons">
+                                                <span class="circle-red"></span>
+                                                <span class="circle-yellow"></span>
+                                                <span class="circle-green"></span>
+                                        </span>
+                                         ~Code@Web
+                                    </div>
+                                   <div class="t-body-container">
+                                    <div class="t-body">
+                                           <span class="root-text"> code@web~$</span>
+                                        <span class="about-text">
+                                        </span>
+                                    </div>
+                                </div>
+                                 </div>
+                    </div>
+                    
+                    <!--Features-->
+                    <div class="col s12 m12 lg12 xl12" style="margin-top: 60px;">
+                            <div class="terminal z-depth-3">
+                                    <div class="t-head">
+                                            <span class="head-icons">
+                                                <span class="circle-red"></span>
+                                                <span class="circle-yellow"></span>
+                                                <span class="circle-green"></span>
+                                        </span>
+                                        ~Features
+                                    </div>
+                                   <div class="t-body-container" style="overflow-y: auto;height: 470px;">
+                                    <div class="t-body">
+                                           <span class="root-text"> code@web~$</span>
+                                           <span class="vi-txt"></span><br>
+                                        <span class="feature-text"> 
+                                        </span>
+                                    </div>
+                                </div>
+                                 </div>
+                    </div>
+                  </div>              
                 </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-              </div>
-            </div>   -->
-   
+
+                <!--CodeEditor-->
+                
+                <div class="about-codeweb col push-m1 push-lg1 push-xl1 s12 m4 lg4 xl4">
+                    <div class="row">
+                        <!--Html writer-->
+                        <div class="col push-m1 push-lg1 push-xl1 s12 m12 lg12 xl12">
+                                <div class="code-writer z-depth-3">
+                                        <div class="c-head">
+                                            HTML
+                                        </div>
+                                       <div class="c-body-container">
+                                        <div class="c-body" style="height: 290px;">
+                                                <span class="code-html-text">
+                                                </span>   
+                                        </div>
+                                    </div>
+                                     </div>
+                        </div>
+                        <!--CSS writer-->
+                        <div class="code-writer-container col push-m3 push-lg3 push-xl3 s12 m12 lg12 xl12">
+                                <div class="code-writer z-depth-3">
+                                        <div class="c-head">
+                                            CSS
+                                        </div>
+                                       <div class="c-body-container">
+                                        <div class="c-body">
+                                            <span class="code-css-text">
+                                            </span>
+                                        </div>
+                                    </div>
+                                     </div>
+                        </div>
+                        <!-- JavaScript Writer-->
+                        <div class="code-writer-container col push-m1 push-lg1 push-xl1 s12 m12 lg12 xl12">
+                                <div class="code-writer z-depth-3">
+                                        <div class="c-head">
+                                            JavaScript
+                                        </div>
+                                       <div class="c-body-container">
+                                        <div class="c-body">
+                                            <span class="code-javascript-text">
+                                            </span>
+                                        </div>
+                                    </div>
+                                     </div>
+                        </div>
+                    </div>
+                       
+                        </div>
+                        
+    </div>
 
     <script>
     var typed = new Typed('.about-text', {
-  strings: ["CodeWeb is a social development environment for front-end designers and developers.", 
-  "It’s the best place to build and deploy a website, show off your work, build test cases, and find inspiration."],
+  strings: ['',"CodeWeb is a social development environment for front-end designers and developers.", 
+  "It’s the best place to build a website."],
   typeSpeed: 60,
     backSpeed: 20,
-    backDelay: 1000,
+    backDelay: 2000,
   loop: true,
   
 });
+
+var htmlTyped = new Typed('.code-html-text', {
+  strings: ['',"<span style='color: cyan;font-weight: 700;'>&lt;html&gt;</span>^500\n<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:cyan;font-weight: 700;'> &lt;head&gt;</span>^500\n<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:cyan;font-weight: 700;'>&lt;title&gt;</span><span style='color: white;font-weight: 700;'> Demo </span><span style='color:cyan;font-weight: 700;'>&lt;/title&gt;</span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:cyan;font-weight: 700;'> &lt;/head&gt;</span>^500\n<br>"
+  +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:cyan;font-weight: 700;'> &lt;body&gt;</span>^500\n<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:cyan;font-weight: 700;'>&lt;h1&gt;</span><span style='color: white;font-weight: 700;'> Hi There! </span><span style='color:cyan;font-weight: 700;'>&lt;/h1&gt;</span>^500\n<br>"+
+  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:cyan;font-weight: 700;'> &lt;/body&gt;</span>^500\n<br><span style='color: cyan;font-weight: 700;'>&lt;/html&gt;"],
+  typeSpeed: 40,
+    backSpeed: 10,
+    backDelay: 11000,
+  loop: true,
+  
+});
+
+var cssTyped = new Typed('.code-css-text', {
+  strings: ['',"<span style='color: orange;'>*</span>{ <br> &nbsp;&nbsp;&nbsp;&nbsp;<span style='color: yellow;font-weight: 400;'>padding-top:</span><span style='color: #1de9b6;'> 0</span><span style='color: white; font-weight: 400;'> ;</span>^500\n<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color: yellow;font-weight: 400;'>margin-top:</span><span style='color: #1de9b6'> 0</span><span style='color: white; font-weight: 400;'> ;</span>^500\n<br>}"],
+  typeSpeed: 50,
+    backSpeed: 20,
+    backDelay: 7000,
+    startDelay: 13000,
+  loop: true,
+  
+});
+
+var jsTyped = new Typed('.code-javascript-text', {
+  strings: ['',"<span style='color: #eeff41;'>function</span> <span style='color: #ffff8d;'>hello()</span> { <br> &nbsp;&nbsp;&nbsp;&nbsp;<span style='color: orange;font-weight: 400;'>alert</span><span style='color:white;'>(</span><span style='color: lime'> 'hello'</span><span style='color:white;'>) ;</span>^500\n<br>}"],
+  typeSpeed: 50,
+    backSpeed: 20,
+    backDelay: 2000,
+    startDelay: 19000,
+  loop: true,
+});
+
+var viTyped = new Typed('.vi-txt', {
+  strings: ['',"Vi features.txt"],
+  typeSpeed: 100,
+    startDelay: 2000,
+    cursorChar: '',
+    loop: false
+});
+
+var featureTyped = new Typed('.feature-text', {
+  strings: ['',"<span style='color: #7e57c2;'>1.</span><span style='color: #f4511e;'> Syntax highlighting</span><br><span style='color: #7e57c2;'>2.</span><span style='color: #f4511e;'> Automatic indent and outdent</span><br><span style='color: #7e57c2;'>3.</span><span style='color: #f4511e;'> Search and replace with regular expressions</span><br>"+
+  "<span style='color: #7e57c2;'>4.</span><span style='color: #f4511e;'> Toggle between soft tabs and real tabs</span><br><span style='color: #7e57c2;'>5.</span><span style='color: #f4511e;'> Displays hidden characters</span><br><span style='color: #7e57c2;'>6.</span><span style='color: #f4511e;'> Code folding</span><br><span style='color: #7e57c2;'>7.</span><span style='color: #f4511e;'> Multiple cursors and selections</span><br><span style='color: #7e57c2;'>8.</span><span style='color: #f4511e;'> Live syntax checker</span>"],
+  typeSpeed: 100,
+    startDelay: 6000,
+    cursorChar: '_',
+    loop: false
+});
     </script>
+
+    <footer>
+<div class="box">
+        <div class="container center white-text" style="display: inline-box; padding-top: 10px;">    
+            <span>&copy; Copyright 2019 | Sayuj Sehgal</span>
+        </div>
+    </div>
+    </footer>
 </body>
 </html>

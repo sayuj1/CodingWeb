@@ -1,0 +1,8 @@
+ 
+
+.box{
+    background-color: black;
+    filter: contrast(.9);
+    opacity: 0.8;
+    height: 40px;
+}
